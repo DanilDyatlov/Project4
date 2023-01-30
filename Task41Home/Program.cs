@@ -4,11 +4,11 @@
 // 1, -7, 567, 89, 223-> 3
 
 Console.WriteLine("Введите колличество чисел: ");
-int numbers = Convert.ToInt32(Console.ReadLine());
+int size = Convert.ToInt32(Console.ReadLine());
 
-if (numbers > 0)
+if (size > 0)
 {
-    int[] creatEnterArray = CreatEnterArray(numbers);
+    int[] creatEnterArray = CreatEnterArray(size);
     PrintArray(creatEnterArray);
     int positiveNumbers = PositiveNumbers(creatEnterArray);
     Console.Write($"Положительные числа: {positiveNumbers}");
@@ -20,7 +20,7 @@ int[] CreatEnterArray(int size)
     int[] array = new int[size];
     for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine("Какие числа хотите проверить? : ");
+        Console.WriteLine("Какие числа хотите проверить?: ");
         array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
